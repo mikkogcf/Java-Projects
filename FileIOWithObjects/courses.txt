@@ -1,0 +1,3 @@
+COP2220,ProgrammingI,3
+COP3503,ProgrammingII,3
+COP3705,Databases,3
