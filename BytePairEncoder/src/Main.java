@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         // Load the token map from the specified file.
         // The TokenMap defines how byte/character pairs are compressed into tokens.
-        String tokenFile = "token-files/poems.bpet";
+        String tokenFile = "BytePairEncoder/token-files/poems.bpet";
         TokenMap map = FileHelper.loadTokens(tokenFile);
 
         // Create the first token (token ID 0) and expand it back to its string form for debugging.
@@ -14,14 +14,14 @@ public class Main {
 
         // Load the source text file and append it to the EncodedList.
         // This step automatically compresses the raw file contents using BPE tokens.
-        String sourceFile = "input-files/poems/A Jelly-Fish -- Marianne Moore.txt";
+        String sourceFile = "BytePairEncoder/input-files/poems/A Jelly-Fish -- Marianne Moore.txt";
         FileHelper.appendFile(myCompressedList, sourceFile);
 
         // Store the compressed EncodedList to disk in a binary compressed format.
         FileHelper.storeEncodedList(myCompressedList, "output-file.bprl");
 
         // Load an already-compressed file into a new EncodedList for comparison.
-        String providedOutput = "output-files/poem-tkn/A Jelly-Fish -- Marianne Moore.txt.bprl";
+        String providedOutput = "BytePairEncoder/output-files/poem-tkn/A Jelly-Fish -- Marianne Moore.txt.bprl";
         EncodedList newList = new EncodedList(map);
         FileHelper.appendEncodedList(newList, providedOutput);
 
