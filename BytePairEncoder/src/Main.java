@@ -18,7 +18,7 @@ public class Main {
         FileHelper.appendFile(myCompressedList, sourceFile);
 
         // Store the compressed EncodedList to disk in a binary compressed format.
-        FileHelper.storeEncodedList(myCompressedList, "output-file.bprl");
+        FileHelper.storeEncodedList(myCompressedList, "BytePairEncoder/output-file.bprl");
 
         // Load an already-compressed file into a new EncodedList for comparison.
         String providedOutput = "BytePairEncoder/output-files/poem-tkn/A Jelly-Fish -- Marianne Moore.txt.bprl";
