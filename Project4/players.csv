@@ -1,7 +1,0 @@
-FirstName,LastName,RookieContract,Salary,Position,Age
-ad,asd,true,$500k - $5m,SF,22
-asd,asdasd,true,$5m - $25m,PG,18
-,,false,null,PG,18
-,,false,null,PG,18
-asd,asd,true,> $25m,SF,20
-asda,asdasd,false,< $500k,PF,22
